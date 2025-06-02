@@ -1,0 +1,12 @@
+/*
+Theme Name: EasyBiz
+Description: Modern business theme for free Elementor
+Version: 1.0.0
+Author: Rille
+*/
+
+body {
+    font-family: Inter, sans-serif;
+    margin: 0;
+    padding: 0;
+}
