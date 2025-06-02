@@ -12,14 +12,14 @@
             <div class="easybiz-logo">
                 <h1><a href="<?php echo home_url(); ?>">EasyBiz</a></h1>
             </div>
-            <button class="easybiz-menu-toggle">☰</button>
+            <button class="easybiz-menu-toggle" onclick="document.querySelector('.easybiz-nav').classList.toggle('active')">☰</button>
             <nav class="easybiz-nav">
                 <?php
                 wp_nav_menu(array(
                     'theme_location' => 'primary',
                     'menu_class' => 'easybiz-nav__menu',
                     'container' => false,
-                    'fallback_cb' => false
+                    'fallback_cb' => 'easybiz_fallback_menu'
                 ));
                 ?>
             </nav>

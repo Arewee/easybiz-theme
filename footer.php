@@ -3,27 +3,7 @@
         <p>&copy; 2025 EasyBiz Theme. Built for business success.</p>
     </div>
 </footer>
+
 <?php wp_footer(); ?>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('Inline JS loaded');
-    
-    const menuToggle = document.querySelector('.easybiz-menu-toggle');
-    const nav = document.querySelector('.easybiz-nav');
-    
-    console.log('Menu toggle:', menuToggle);
-    console.log('Nav:', nav);
-    
-    if (menuToggle && nav) {
-        menuToggle.addEventListener('click', function() {
-            console.log('Menu clicked');
-            nav.classList.toggle('active');
-        });
-    }
-});
-</script>
-<?php wp_footer(); ?>
-</body>
-</html>
 </body>
 </html>
