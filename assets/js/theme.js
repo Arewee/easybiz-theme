@@ -1,12 +1,7 @@
-<footer class="easybiz-footer">
-    <div class="container">
-        <p>&copy; 2025 EasyBiz Theme. Built for business success.</p>
-    </div>
-</footer>
-<?php wp_footer(); ?>
-<script>
+console.log('Theme JS loaded');
+
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Inline JS loaded');
+    console.log('DOM ready');
     
     const menuToggle = document.querySelector('.easybiz-menu-toggle');
     const nav = document.querySelector('.easybiz-nav');
@@ -21,9 +16,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-</script>
-<?php wp_footer(); ?>
-</body>
-</html>
-</body>
-</html>

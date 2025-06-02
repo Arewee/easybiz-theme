@@ -12,11 +12,16 @@
             <div class="easybiz-logo">
                 <h1><a href="<?php echo home_url(); ?>">EasyBiz</a></h1>
             </div>
+            <button class="easybiz-menu-toggle">☰</button>
             <nav class="easybiz-nav">
-                <a href="#" class="easybiz-nav__link">Home</a>
-                <a href="#" class="easybiz-nav__link">About</a>
-                <a href="#" class="easybiz-nav__link">Services</a>
-                <a href="#" class="easybiz-nav__link">Contact</a>
+                <?php
+                wp_nav_menu(array(
+                    'theme_location' => 'primary',
+                    'menu_class' => 'easybiz-nav__menu',
+                    'container' => false,
+                    'fallback_cb' => false
+                ));
+                ?>
             </nav>
         </div>
     </div>
