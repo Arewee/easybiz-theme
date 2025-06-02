@@ -1,12 +1,82 @@
 /*
 Theme Name: EasyBiz
-Description: Modern business theme for free Elementor
+Description: Modern business theme for free Elementor  
 Version: 1.0.0
 Author: Rille
 */
 
+/* CSS Variables - Light Mode (Default) */
+:root {
+    --color-primary: #635bff;
+    --color-secondary: #f6f9fc;
+    --color-bg: #ffffff;
+    --color-text: #1a1a1a;
+    --color-border: #e5e7eb;
+    
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    
+    --border-radius: 8px;
+    --font-size-base: 1rem;
+    --line-height: 1.6;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-bg: #0a0e27;
+        --color-text: #ffffff;
+        --color-primary: #7c3aed;
+        --color-secondary: #1e293b;
+        --color-border: #374151;
+    }
+}
+
+/* Base Styles */
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Inter, sans-serif;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
     margin: 0;
     padding: 0;
+    background: var(--color-bg);
+    color: var(--color-text);
+    line-height: var(--line-height);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-text);
+    margin-bottom: var(--space-sm);
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+/* Buttons */
+.btn {
+    background: var(--color-primary);
+    color: white;
+    padding: var(--space-sm) var(--space-md);
+    border: none;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
 }
