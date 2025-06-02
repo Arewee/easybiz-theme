@@ -80,3 +80,140 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(-2px);
     opacity: 0.9;
 }
+
+/* Header */
+.easybiz-header {
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--space-sm) 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.easybiz-header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.easybiz-logo h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.easybiz-logo a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.easybiz-nav {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.easybiz-nav__link {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.easybiz-nav__link:hover {
+    color: var(--color-primary);
+}
+
+/* Main Content */
+.easybiz-main {
+    padding: var(--space-xl) 0;
+}
+
+/* Hero Section */
+.easybiz-hero {
+    text-align: center;
+    padding: var(--space-xl) 0;
+    margin-bottom: var(--space-xl);
+}
+
+.easybiz-hero h1 {
+    font-size: 3rem;
+    margin-bottom: var(--space-sm);
+    color: var(--color-text);
+}
+
+.easybiz-hero p {
+    font-size: 1.25rem;
+    color: var(--color-text);
+    opacity: 0.8;
+    margin-bottom: var(--space-lg);
+}
+
+/* Features Grid */
+.easybiz-features {
+    margin-bottom: var(--space-xl);
+}
+
+.easybiz-features h2 {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+    font-size: 2rem;
+}
+
+.easybiz-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+}
+
+.easybiz-card {
+    background: var(--color-secondary);
+    padding: var(--space-lg);
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.easybiz-card:hover {
+    transform: translateY(-4px);
+}
+
+.easybiz-card h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--space-sm);
+}
+
+/* Footer */
+.easybiz-footer {
+    background: var(--color-text);
+    color: var(--color-bg);
+    text-align: center;
+    padding: var(--space-lg) 0;
+    margin-top: var(--space-xl);
+}
+
+.easybiz-footer p {
+    margin: 0;
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .easybiz-header__content {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+    
+    .easybiz-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .easybiz-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .easybiz-grid {
+        grid-template-columns: 1fr;
+    }
+}
